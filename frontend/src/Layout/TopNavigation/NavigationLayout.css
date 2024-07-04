@@ -1,0 +1,30 @@
+.Top-nav-container{ 
+    display: flex;
+    top:0;
+    z-index:5;
+    width:100%;
+    height:120px;
+    flex-direction: row;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+.Reference-container{
+    display:flex;
+    width:52%;
+    height:100%;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+.Top-nav-logo{
+    display: flex;
+    width:120px;
+    height:100%;
+    border:none;
+}
+/*  */
+
+.Top-nav-menu ul {
+    list-style-type: none;
+}

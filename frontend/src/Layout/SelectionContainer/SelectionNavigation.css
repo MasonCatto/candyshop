@@ -1,0 +1,12 @@
+.Product-selection-container {
+    display: flex;
+    z-index: 4;
+    top: 120px;
+    width:100%;
+     height:50px;
+    background-color: #DBFFDE;  
+    padding:10px;
+    box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.15);
+}
