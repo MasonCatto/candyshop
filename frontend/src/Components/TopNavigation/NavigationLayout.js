@@ -12,10 +12,10 @@ function NavigationLayout() {
                     <div className="Top-nav-menu">
                         <ul>
                             <li>
-                                <a href="/cart">
+                                <a className="Cart-attribute" href="/cart">
                                 <img src={CartIcon}></img>
                                 </a>
-                                <a href="/profile">Login</a>
+                                <a className="Login-attribute" href="/profile">Login</a>
                             </li>
                         </ul>
                     </div>

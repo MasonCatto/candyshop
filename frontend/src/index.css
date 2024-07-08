@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+:root{
+  --raspberry-glaze: #FF7AAA;
+  --lavender-blush: #FFEAF5;
+  --pale-rose: #E9C3D5;
+}

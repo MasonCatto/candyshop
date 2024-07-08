@@ -17,6 +17,14 @@
     flex-direction: row;
 
 }
+.Top-nav-menu{
+    justify-content: space-between;
+    flex-direction: row;
+    width:150px;
+}
+.Cart-attribute{
+    margin-right:50px;
+}
 .Top-nav-logo{
     display: flex;
     width:120px;

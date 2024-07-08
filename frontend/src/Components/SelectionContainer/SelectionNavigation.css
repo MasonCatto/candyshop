@@ -1,0 +1,86 @@
+.Product-selection-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    top: 120px;
+    width:100%;
+    height:100px;
+    background-color:  var(--raspberry-glaze);
+    padding:10px;
+    box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.15);
+}
+.Selection-dropdown {
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    appearance: none; /* Remove default dropdown arrow in some browsers */
+}
+
+.Selection-dropdown:focus {
+    border-color: #999;
+    outline: none;
+}
+
+.Selection-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.list2 {
+    display: flex; /* Use flexbox to layout items */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+.Selection-attribute {
+    display: inline-block; /* Change display type to inline-block */
+    width: 150px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
+    margin: 5px; /* Add margin around each item */
+    padding: 10px; /* Add padding inside each item */
+    text-align: center; /* Center text horizontally */
+    line-height: 30px; /* Center text vertically if the height is 50px */
+    background-color: #f0f0f0; /* Background color */
+    border: 1px solid #ccc; /* Border around each item */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from links */
+    color: #000; /* Text color */
+    box-sizing: border-box; /* Include padding and border in width and height */
+    cursor: pointer;
+}
+
+.Selection-attribute:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+
+.Selection-attribute.selected {
+    background-color: #d0d0d0;
+    border-color: #999;
+}
+
+/* Media query to switch to dropdown at a specific width */
+@media (max-width: 600px) {
+    .Selection-list {
+        display: none;
+    }
+
+    .Selection-dropdown {
+        display: block;
+    }
+}
+
+@media (min-width: 601px) {
+    .Selection-list {
+        display: flex;
+    }
+
+    .Selection-dropdown {
+        display: none;
+    }
+}
