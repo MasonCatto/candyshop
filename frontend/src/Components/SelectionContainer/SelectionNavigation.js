@@ -1,77 +1,52 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState, useEffect, useRef} from 'react';
 import './SelectionNavigation.css'
+import MenuIcon from '../../Assets/SelectionContainer/SelectionMenu.svg';
+
 
 function SelectionNavigation() {
-    //if width smaller, or is 600, dropdown is set to true
-    const [isDropdown, setIsDropdown] = useState(window.innerWidth<=600);
-    //[state, setState] = useState(initialState)
-    //useState returns an array with two values, the current state, which during the first render
-    //will be equal to the initial state, that is passed
-    //the set function that lets you update the state to a different value 
-    //and trigger a rerender setState->state
-    const [selected, setSelected] = useState('');
-
-    const items = [
-        'All Products',
-        'On Sale',
-        'Drinks',
-        'Candy',
-        'Snacks',
-        'Food',
-        'Bundles'
-    ]
     
-    const handleResize = () => {
-        setIsDropdown(window.innerWidth<=600);
-    }
+    const [open,setOpen] = useState(false);
 
-    useEffect(() => {
-        //resizing is called on render
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    },[]);
+    let menuRef = useRef();
 
-    const handleChange = (event) => {
-        setSelected(event.target.value);
-    }
+    //click outside the dropdown menu to close it
+    useEffect(()=>{
+        let handler = (e)=>{
+            if(!menuRef.current.contains(e.target)){
+            setOpen(false);
+            }
+        }
+        document.addEventListener("mousedown",handler)
 
-    const handleClick = (event, item) => {
-        event.preventDefault();
-        setSelected(item);
-    }
+    });
 
     return (
-        <div className="Product-selection-container">
-            {isDropdown ? (
-            <select 
-                className="Selection-dropdown"
-                value={selected}
-                onChange={handleChange}
-            >
-                <option value="" disabled> <img src="" alt="Category"></img></option>
-                {items.map((item, index) => (
-                    <option key={index} value={item}>
-                        {item}
-                    </option>
-                ))}
-            </select>
-            ) : ( 
-            <ul className="Selection-list">
-                <li className="list2">
-                    {items.map((item, index) => (
-                        <a
-                            key={index}
-                            href="#"
-                            className={`Selection-attribute ${selected === item ? 'selected' : ''}`}
-                            onClick={(event) => handleClick(event, item)}
-                        >
-                            {item}
-                        </a>
-                    ))}
-                </li>
-            </ul>
-            )}
+        <div className="Product-selection-container" ref={menuRef}>
+            <div className="Product-selection">
+                <DropdownItem text={"ALL ITEMS"} href={"/allitems"}/>
+                <DropdownItem text={"DRINKS"}/>
+                <DropdownItem text={"SWEETS"}/>
+                <DropdownItem text={"SNACKS"}/>
+                <DropdownItem text={"FOOD"}/>
+                <DropdownItem text={"BUNDLES"}/>
+            </div>
+            <button className="Menu-trigger" onClick={()=>{setOpen(!open)}}>
+                    <img src={MenuIcon} alt="Menu Icon" className="Menu-icon"/>
+            </button>
+            <div className={`Dropdown-menu ${open? 'active' : 'inactive'}`}>
+                    <ul>
+                        <DropdownItem text={"All items"}/>
+                    </ul>
+                </div>
         </div>
     );
 }
+function DropdownItem(props){
+    return (
+        <li className = "Dropdown-item">
+        <a href={props.href}>{props.text}</a>
+        </li>
+    );
+}
+
 export default SelectionNavigation;

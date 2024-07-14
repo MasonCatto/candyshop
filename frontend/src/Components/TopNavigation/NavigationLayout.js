@@ -3,7 +3,7 @@ import WebsiteLogo from '../../Assets/TopNavigation/WebsiteLogo.png';
 import CartIcon from '../../Assets/TopNavigation/CartIcon.svg';
 function NavigationLayout() {
     return (
-        <div className="Top-nav-container">
+        <nav className="Top-nav-container">
             {/* <div className="Reference-container"> */}
                 <div className=""></div>
                 <a href="/">
@@ -19,7 +19,7 @@ function NavigationLayout() {
                             </li>
                         </ul>
                     </div>
-                </div>
+                </nav>
             // </div>
     )
 }
