@@ -1,16 +1,17 @@
-import './Home.css';
-import TopNavigation from '../Components/TopNavigation/NavigationLayout.js';
 import SelectionContainer from '../Components/SelectionContainer/SelectionNavigation.js';
-import FooterContainer from '../Components/Footer/Footer.js';
+import AdContainer from '../Components/Advertisement/AdContainer.js';
+import SearchContainer from '../Components/SearchContainer/SearchContainer.js';
+import ItemContainer from '../Components/ItemContainer/ItemContainer.js';
+import LayoutManager from '../LayoutManager.js';
 
 export default function Profile() {
   return (
-    <div className="Layout-container">
-        <TopNavigation />
+    <LayoutManager>
         <SelectionContainer />
-        <h2>profile</h2>
-        <FooterContainer/>
-    </div>
+        <AdContainer />
+        <SearchContainer />
+        <ItemContainer />
+    </LayoutManager>
   );
 }
 

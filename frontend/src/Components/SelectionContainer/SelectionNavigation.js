@@ -22,28 +22,35 @@ function SelectionNavigation() {
 
     return (
         <div className="Product-selection-container" ref={menuRef}>
+
             <div className="Product-selection">
-                <DropdownItem text={"ALL ITEMS"} href={"/allitems"}/>
-                <DropdownItem text={"DRINKS"}/>
-                <DropdownItem text={"SWEETS"}/>
-                <DropdownItem text={"SNACKS"}/>
-                <DropdownItem text={"FOOD"}/>
-                <DropdownItem text={"BUNDLES"}/>
+                <DropdownItem text={"ALL ITEMS"} href={"/allitems"} class={"List-item"}/>
+                <DropdownItem text={"DRINKS"} href={"/allitems"} class={"List-item"}/>
+                <DropdownItem text={"SWEETS"} href={"/allitems"} class={"List-item"}/>
+                <DropdownItem text={"SNACKS"} href={"/allitems"} class={"List-item"}/>
+                <DropdownItem text={"FOOD"} href={"/allitems"} class={"List-item"}/>
+                <DropdownItem text={"BUNDLES"} href={"/allitems"} class={"List-item"}/>
             </div>
             <button className="Menu-trigger" onClick={()=>{setOpen(!open)}}>
                     <img src={MenuIcon} alt="Menu Icon" className="Menu-icon"/>
             </button>
+
             <div className={`Dropdown-menu ${open? 'active' : 'inactive'}`}>
                     <ul>
-                        <DropdownItem text={"All items"}/>
+                        <DropdownItem text={"ALL ITEMS"} href={"/allitems"} class={"Dropdown-item"}/>
+                        <DropdownItem text={"DRINKS"} href={"/allitems"} class={"Dropdown-item"}/>
+                        <DropdownItem text={"SWEETS"} href={"/allitems"} class={"Dropdown-item"}/>
+                        <DropdownItem text={"SNACKS"} href={"/allitems"} class={"Dropdown-item"}/>
+                        <DropdownItem text={"FOOD"} href={"/allitems"} class={"Dropdown-item"}/>
+                        <DropdownItem text={"BUNDLES"} href={"/allitems"} class={"Dropdown-item"}/>
                     </ul>
-                </div>
+            </div>
         </div>
     );
 }
 function DropdownItem(props){
     return (
-        <li className = "Dropdown-item">
+        <li className = {props.class}>
         <a href={props.href}>{props.text}</a>
         </li>
     );

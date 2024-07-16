@@ -1,0 +1,19 @@
+.Layout-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width:100%;
+    min-height: 100vh;;
+    background-color: var(--lavender-blush);
+  }
+  .Body-components{
+    display:flex;
+    margin-bottom:auto;
+    flex-direction: column;
+    width:100%;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }

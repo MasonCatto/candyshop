@@ -1,21 +1,18 @@
-import './Home.css';
-import TopNavigation from '../Components/TopNavigation/NavigationLayout.js';
 import AdContainer from '../Components/Advertisement/AdContainer.js';
 import SelectionContainer from '../Components/SelectionContainer/SelectionNavigation.js';
 import SearchContainer from '../Components/SearchContainer/SearchContainer.js';
 import ItemContainer from '../Components/ItemContainer/ItemContainer.js';
-import FooterContainer from '../Components/Footer/Footer.js';
 
-export default function Home() {
+import LayoutManager from '../LayoutManager.js';
+const HomePage = () => {
   return (
-    <div className="Layout-container">
-        <TopNavigation />
+    <LayoutManager>
         <SelectionContainer />
         <AdContainer />
         <SearchContainer />
         <ItemContainer />
-        <FooterContainer/>
-    </div>
+    </LayoutManager>
   );
 }
 
+export default HomePage;

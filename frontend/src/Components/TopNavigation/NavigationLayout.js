@@ -9,7 +9,7 @@ function NavigationLayout() {
                 <a href="/">
                     <img className='Top-nav-logo' src={WebsiteLogo} alt="logo"/>
                 </a>
-                    <div className="Top-nav-menu">
+                    {/* <div className="Top-nav-menu">
                         <ul>
                             <li>
                                 <a className="Cart-attribute" href="/cart">
@@ -18,7 +18,11 @@ function NavigationLayout() {
                                 <a className="Login-attribute" href="/profile">Login</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
+                                <a className="Cart-attribute" href="/cart">
+                                <img src={CartIcon}></img>
+                                </a>
+                                <a className="Login-attribute" href="/profile">Login</a>
                 </nav>
             // </div>
     )
