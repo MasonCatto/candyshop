@@ -1,13 +1,13 @@
-import './AdContainer.css';
-import Ad1 from '../../Assets/Advertisement/Ad1.jpg';
+// import './AdContainer.css';
+import {Carousel} from '../../Utility/Carousel/Carousel.js';
+import adCarouselData from "../../Data/AdCarouselData.json";
+
 function AdContainer() {
+    const { slides } = adCarouselData; // Access slides from the imported JSON object
     return (
         <div className="Ad-container">
-            <img className="Advert-image" src={Ad1}/>
-            {/* <div className="Ad-content">
-                <img className="Advert-image" src={Ad1}/>
-            </div> */}
+            <Carousel data={slides} />
         </div>
-    )
+    );
 }
 export default AdContainer;
