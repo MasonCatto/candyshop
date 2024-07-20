@@ -18,6 +18,8 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
+    /* color: var(--mulled-wine); */
+    text-decoration: none;
     width:850px;
     height: 100%;
     padding:10px;
@@ -36,20 +38,34 @@
     border-radius: 25px;
     background-color: rgb(246, 175, 255);
     box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.15);
+    transition: color 300ms ease-in-out;
+    transition: background-color 250ms ease-in-out;
     height:50px;
     width:100%;
+}
+.Dropdown-item:hover{
+    background-color: var(--mulled-wine);
+    color: var(--electric-lavender);
+    cursor:pointer;
 }
 .List-item{
     display:flex;
     list-style: none;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
     font-weight: bold;
     border-radius: 25px;
-    background-color: rgb(246, 175, 255);
+    background-color: var(--electric-lavender);
+    transition: color 300ms ease-in-out;
+    transition: background-color 250ms ease-in-out;
     height:50px;
     width:130px;
-
+}
+.List-item:hover{
+    background-color: var(--mulled-wine);
+    color: var(--electric-lavender);
+    
 }
 .Menu-trigger{
     position:absolute;
@@ -80,7 +96,6 @@
     background-color: white;
     box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.15);
 }
-
 .Dropdown-menu.active {
     opacity: 1;
     transform: translateX(0);
@@ -89,6 +104,16 @@
 .Dropdown-menu.inactive {
     opacity: 0;
     transform: translateX(-300px);
+}
+.Attribute-style{
+    text-decoration:none;
+    color: var(--mulled-wine);
+    transition: color 100ms ease-in-out;
+    width:100%;
+    height:100%;
+}
+.Attribute-style:hover{
+    color: var(--electric-lavender);
 }
 
 @media(min-width: 1001px) {

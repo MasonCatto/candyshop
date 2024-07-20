@@ -1,7 +1,7 @@
 import React from 'react';
 import './LayoutManager.css';
-import TopNavigation from './Components/TopNavigation/NavigationLayout.js';
-import Footer from './Components/Footer/Footer.js';
+import TopNavigation from './Components/TopNavigation/NavigationLayout.jsx';
+import Footer from './Components/Footer/Footer.jsx';
 
 const Layout = ({ children }) => {
   return (

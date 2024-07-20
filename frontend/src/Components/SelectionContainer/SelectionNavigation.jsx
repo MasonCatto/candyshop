@@ -50,8 +50,8 @@ function SelectionNavigation() {
 }
 function DropdownItem(props){
     return (
-        <li className = {props.class}>
-        <a href={props.href}>{props.text}</a>
+        <li className = {props.class} href={props.href}>
+            {props.text}
         </li>
     );
 }
