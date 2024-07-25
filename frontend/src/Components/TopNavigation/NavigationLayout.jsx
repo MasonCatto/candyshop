@@ -1,6 +1,7 @@
 import './NavigationLayout.css';
 import WebsiteLogo from '../../Assets/TopNavigation/WebsiteLogo.png';
-import CartIcon from '../../Assets/TopNavigation/CartIcon.svg';
+import { ReactComponent as CartIcon } from '../../Assets/TopNavigation/CartIcon.svg';
+
 function NavigationLayout() {
     return (
         <nav className="Top-nav-container">
@@ -19,9 +20,9 @@ function NavigationLayout() {
                             </li>
                         </ul>
                     </div> */}
-                                <a className="Cart-attribute" href="/cart">
-                                <img src={CartIcon}></img>
-                                </a>
+                            <a className="Cart-attribute" href="/cart">
+                                <CartIcon />
+                            </a>
                                 <a className="Login-attribute" href="/profile">Login</a>
                 </nav>
             // </div>

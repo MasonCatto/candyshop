@@ -1,4 +1,4 @@
-import './Carousel.css';
+import styles from './carousel.module.css';
 import {useState} from 'react';
 
 export const Carousel = ({data}) =>{
@@ -10,7 +10,7 @@ export const Carousel = ({data}) =>{
     //     height: '100%',
     //     // borderRadius: '10px',
     //     backgroundPosition: 'center', 
-    //     backgroundSize: 'cover',
+    //     // backgroundSizexport default AdContainer;e: 'cover',
     //     // transition: 'transform 300ms ease-in-out',
     //     backgroundImage: `url(${data[currentIndex].url})`,
 
@@ -67,11 +67,11 @@ export const Carousel = ({data}) =>{
             })} */}
             <div style={leftArrowStyles} onClick={goToPrevious}> left </div>
             <div style={rightArrowStyles}onClick={goToNext}> right</div>
-            <div className="Slide-styles"></div>
+            <div className={styles.slideStyles}></div>
             <div style={dotContainerStyles}>
                 {data.map((slide, slideIndex) => (
                 <div 
-                className={`dotStyles ${slideIndex === currentIndex ? 'active' : ''}`}
+                className={`${styles.dotStyles} ${slideIndex === currentIndex ? 'active' : ''}`}
                 key={slideIndex} 
                 onClick={() => goToSlide(slideIndex)}>
                     ●

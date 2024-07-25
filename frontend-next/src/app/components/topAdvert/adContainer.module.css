@@ -1,0 +1,36 @@
+.AdContainer {
+    display: flex;
+    width: 100%;
+    height: 700px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    z-index:0;
+    top:240px; 
+}
+
+/* .Ad-content {
+    display: flex;
+    max-width:100%;
+    max-height:100%;
+    border-radius: 15px;
+    background-color: #D9D9D9;
+    overflow: hidden; /* Ensures content doesn't overflow the container */
+/* } */
+
+.AdvertImage {
+    /* max-width: 100%;
+    max-height: 100%; */
+    width:100%;
+    height:100%;
+    object-fit: contain; /* Ensures the image covers the entire container while maintaining aspect ratio */
+    border-radius: 25%; /* Ensures the image corners match the container's border-radius */
+}
+
+.SlideContainer{
+    width:90%;
+    max-width: 1200px;
+    height:600px;
+    margin: 0 auto;
+}

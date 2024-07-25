@@ -1,0 +1,136 @@
+.ProductSelectionContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position:absolute; */
+    flex-wrap: wrap;
+    /* z-index: 4; */
+    /* top: 120px; */
+    width:100%;
+    height:100px;
+    background-color:  var(--highlight-color);
+    padding:10px;
+    box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.15);
+}
+
+.ProductSelection{
+    margin:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    /* color: var(--mulled-wine); */
+    text-decoration: none;
+    width:850px;
+    height: 100%;
+    /* padding:10px; */
+    cursor:pointer;
+}
+.MenuContainer{
+    position: absolute;
+}
+.DropdownItem{
+    display:flex;
+    list-style: none;
+    align-items: center;
+    margin-bottom:10px;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: rgb(246, 175, 255);
+    box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.15);
+    transition: color 300ms ease-in-out;
+    transition: background-color 250ms ease-in-out;
+    height:50px;
+    width:100%;
+}
+.DropdownItem:hover{
+    background-color: var(--mulled-wine);
+    color: var(--electric-lavender);
+    cursor:pointer;
+}
+.ListItem{
+    display:flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: var(--accent-color);
+    transition: color 300ms ease-in-out;
+    transition: background-color 250ms ease-in-out;
+    height:50px;
+    width:130px;
+}
+.ListItem:hover{
+    background-color: var(--hover-color);
+    color: var(--accent-color);
+    
+}
+.MenuTrigger{
+    position:absolute;
+    display:none;
+    background-color: white;
+    border:none;
+    left:20px;
+    height:80px;
+    width:80px;
+    overflow:hidden;
+    cursor:pointer;
+}
+.MenuTrigger img{
+    width:40px;
+    height:50px;
+}
+.DropdownMenu {
+    position: absolute;
+    top: 210px;
+    padding: 30px;
+    border-radius: 0 25px 25px 0;
+    width: 300px;
+    /* height: 800px; */
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    transform: translateX(-300px);
+    left: 0px;
+    opacity: 0;
+    background-color: white;
+    box-shadow: 1px 7px 5px 0px rgba(0,0,0,0.15);
+}
+.DropdownMenu.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.DropdownMenu.inactive {
+    opacity: 0;
+    transform: translateX(-300px);
+}
+.AttributeStyle{
+    text-decoration:none;
+    color: var(--hover-color);
+    transition: color 100ms ease-in-out;
+    width:100%;
+    height:100%;
+}
+.AttributeStyle:hover{
+    color: var(--highlight-color);
+}
+
+@media(min-width: 1001px) {
+    .DropdownMenu{
+        display:none;
+    }
+}
+
+@media(max-width: 1000px) {
+    .ProductSelection{
+        display:none;
+    }
+    .MenuTrigger{
+        display:block;
+    }
+}
+
+

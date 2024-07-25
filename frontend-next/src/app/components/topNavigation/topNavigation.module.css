@@ -1,8 +1,9 @@
-.Top-nav-container { 
+    .TopNavContainer { 
     display: flex;
     /* position: absolute; */
     /* position:fixed; */
     justify-content: center;
+    font-family: var(--font-highlight);
     z-index: 5;
     width: 100%;
     height: 120px;
@@ -11,22 +12,22 @@
     align-items: center;
 }
 
-.Cart-attribute {
+.CartAttribute {
     position:absolute;
     right: 150px;
     height:35px;
     width:35px;
 }
-.Cart-attribute:hover{
+.CartAttribute:hover{
     cursor:pointer;
 }
 
-.Top-nav-logo {
+.TopNavLogo {
     width: 120px;
     height: 100%;
 }
 
-.Login-attribute {
+.LoginAttribute {
     position:absolute;
     right: 40px;
 }
