@@ -1,9 +1,9 @@
-import './ItemContainer.css'
+import style from './itemContainer.module.css'
 
 export default function ItemContainer() {
     return (
-        <div className="Item-container">
-            <div className="Item-content">
+        <div className={style.ItemContainer}>
+            <div className={style.ItemContent}>
                 <h1>Item</h1>
             </div>
         </div>

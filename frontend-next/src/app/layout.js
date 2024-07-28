@@ -1,10 +1,14 @@
-import { Inter } from "next/font/google";
 import { Rubik_Mono_One } from "next/font/google";
 import "./globals.css";
 import Header from './components/topNavigation/topNavigation';
 import Footer from "./components/footer/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const Rubik = Rubik_Mono_One({
+  weight: "400",
+  style: ["normal"],
+  subsets: ["latin"],
+  variable: "--font-highlight",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -14,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-           <body className={inter.className}>
+           <body className={Rubik.variable}>
             <Header />
             {children}
             <Footer/>

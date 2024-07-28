@@ -1,6 +1,6 @@
 import styles from './adContainer.module.css';
-// import {Carousel} from '../../utility/carousel';
-// import adCarouselData from "../../Data/AdCarouselData.json";
+import {Carousel} from '../../utility/carousel';
+// import adCarouselData from "../../data/adCarousel.json";
 
 export default function AdContainer() {
     // const { slides } = adCarouselData; 
@@ -14,7 +14,7 @@ export default function AdContainer() {
     return (
         <div className={styles.AdContainer}>
             <div className={styles.SlideContainer}>
-                {/* <Carousel data={slides} /> */}
+                <Carousel data={slides} />
             </div>
         </div>
     );

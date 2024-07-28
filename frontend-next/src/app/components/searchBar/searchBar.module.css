@@ -1,0 +1,50 @@
+.SearchContainer{
+    display: flex;
+    background-color: white;
+    justify-content: flex-end;
+    align-items: center;
+    height:70px;
+    width:100%;
+    /* padding:8px; */
+    /* padding-right: 20px; */
+    
+}
+.InputBar{
+    display:flex;
+    /* width:20%; */
+    height:50px;
+    min-width:200px;
+    max-width:400px;
+    width:20%;
+    box-sizing: border-box; 
+    -webkit-border-top-left-radius: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-bottomleft: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;    
+    display:flex;
+    border-style: solid;
+}
+.InputButton{
+    display:flex;
+    height:50px;
+    box-sizing: border-box; 
+    width: 50px;
+    margin-right:10px;
+    border-radius: 0 15px 15px 0;
+    /* margin-right:20px; */
+    /* -moz-border-radius-topright: 15px;
+    -moz-border-radius-bottomright: 15px;
+    border-top-right-radius: 15px;asdas
+    border-bottom-right-radius: 15px;
+    border-style: solid;
+    border-left:none; */
+    /* padding:6px; */
+    background-color: var(--highlight-color);
+}
+.SearchIcon{
+    height:100%;
+    width:100%;
+    color: white;
+}

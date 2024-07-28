@@ -5,16 +5,15 @@ export const Carousel = ({data}) =>{
     
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // const slideStyles ={
-    //     width: '100%',
-    //     height: '100%',
-    //     // borderRadius: '10px',
-    //     backgroundPosition: 'center', 
-    //     // backgroundSizexport default AdContainer;e: 'cover',
-    //     // transition: 'transform 300ms ease-in-out',
-    //     backgroundImage: `url(${data[currentIndex].url})`,
-
-    // }
+    const slideStyles ={
+        width: '100%',
+        height: '100%',
+        // borderRadius: '10px',
+        bacgroundSize: 'fit',
+        backgroundPosition: 'center', 
+        borderRadius: '60px',
+        backgroundImage: `url(${data[currentIndex].url})`
+    }
     const leftArrowStyles = {
         position: 'absolute',
         top: '50%',
@@ -61,17 +60,17 @@ export const Carousel = ({data}) =>{
         setCurrentIndex(slideIndex);
     }
     return (
-        <div className="Carousel">
+        <div className={styles.Carousel}>
             {/* {data.map((slide, idx) => {
-                return <img src={slide.src} alt={slide.alt} key={idx} className="Slide"/>;
+                return <img src={slide.src} alt={slide.alt} key={idx}/>;
             })} */}
             <div style={leftArrowStyles} onClick={goToPrevious}> left </div>
             <div style={rightArrowStyles}onClick={goToNext}> right</div>
-            <div className={styles.slideStyles}></div>
+            <div style={slideStyles}></div>
             <div style={dotContainerStyles}>
                 {data.map((slide, slideIndex) => (
                 <div 
-                className={`${styles.dotStyles} ${slideIndex === currentIndex ? 'active' : ''}`}
+                className={`${styles.dotStyles} ${slideIndex === currentIndex ? styles.active : ''}`}   
                 key={slideIndex} 
                 onClick={() => goToSlide(slideIndex)}>
                     ●

@@ -1,12 +1,13 @@
   :root {
-    --font-highlight: Rubik Mono One, monospace;
     margin-right:0;
-
+    padding:0;  
     margin:0;
+    box-sizing: border-box; 
     --background-color:#FFEAF5;
     --highlight-color: #FF7AAA; 
     --accent-color: #F6AFFF;
     --hover-color: #5e425c;
+    --font-highlight: 'Rubik_Mono_One';
     
     /* --max-width: 1100px;
     --border-radius: 12px;
@@ -54,6 +55,16 @@
       margin:0;
       padding:0;
       background-color: var(--background-color);
+  }
+
+  h1{
+    font-family: var(--font-highlight);
+    color: #5E425C; 
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal; 
+    text-shadow: 0px 8px 4px #E9C3D5; 
   }
   /* @media (prefers-color-scheme: dark) {
     :root {
