@@ -8,8 +8,7 @@ export const Carousel = ({data}) =>{
     const slideStyles ={
         width: '100%',
         height: '100%',
-        // borderRadius: '10px',
-        bacgroundSize: 'fit',
+        backgroundSize: 'fit',
         backgroundPosition: 'center', 
         borderRadius: '60px',
         backgroundImage: `url(${data[currentIndex].url})`
@@ -41,11 +40,6 @@ export const Carousel = ({data}) =>{
         position: 'absolute',
         bottom: '25px',
     }
-    // const dotStyles = {
-    //     margin: '0 3px',
-    //     cursor: 'pointer',
-    //     fontSize: '20px'
-    // }
     const goToPrevious = () => {
         const isFirstSlide = currentIndex === 0;
         const newIndex = isFirstSlide ? data.length - 1 : currentIndex -1;
@@ -60,10 +54,7 @@ export const Carousel = ({data}) =>{
         setCurrentIndex(slideIndex);
     }
     return (
-        <div className={styles.Carousel}>
-            {/* {data.map((slide, idx) => {
-                return <img src={slide.src} alt={slide.alt} key={idx}/>;
-            })} */}
+        <div className={styles.carousel}>
             <div style={leftArrowStyles} onClick={goToPrevious}> left </div>
             <div style={rightArrowStyles}onClick={goToNext}> right</div>
             <div style={slideStyles}></div>

@@ -1,0 +1,25 @@
+.dropdownMenu{
+    position: absolute;
+    top:80px;
+    width:200px;
+    border-radius: 0  60px 60px 0;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    transform: translateX(-300px);
+    box-shadow: var(--box-shadow);
+}
+.dropdownMenu.active{
+    display:flex;
+    opacity: 1;
+    transform: translateX(0);
+}
+.dropdownMenu.inactive{
+    opacity: 0;
+    transform: translateX(-300px);
+}
+.flex-column{
+    display: flex;
+    position:absolute;
+    flex-direction: column;
+    border:none;
+    background:transparent;
+}

@@ -3,3 +3,19 @@
   /* position:relative; */
   justify-content:space-between;
 }
+.relative{
+  position:relative;
+  z-index:3;
+}
+.candy{
+  position:fixed;
+  width:200px;
+  height:200px;
+  top:800px;
+  left: 30px;
+  z-index:2;
+}
+.relativeChild{
+  position:relative;
+  z-index:3;
+}

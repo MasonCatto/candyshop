@@ -54,9 +54,12 @@
 {
    .trendingItems{
         width:65%;
+        justify-content:center;
+        align-items: center;
    }
    .item{
     margin-bottom:20px;
-
+    width:450px;
+    height:450px;
 }
 }

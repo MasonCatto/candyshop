@@ -15,10 +15,6 @@ export default function Home() {
             <SelectionMenu />
             <TopAdvert />
             <Trending />
-            <div>
-            {/* <h1>TRENDING NOW</h1> */}
-
-            </div>
             <SearchBar />
            <ItemContainer />
       </div>

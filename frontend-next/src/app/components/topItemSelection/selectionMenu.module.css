@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* position:absolute; */
+    /* position:relative; */
     flex-wrap: wrap;
     margin-bottom:auto;
     /* z-index: 4; */
@@ -91,7 +91,6 @@
     padding: 30px;
     border-radius: 0 25px 25px 0;
     width: 300px;
-    /* height: 800px; */
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
     transform: translateX(-300px);
     left: 0px;

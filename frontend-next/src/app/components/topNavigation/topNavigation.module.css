@@ -1,10 +1,7 @@
-    .TopNavContainer { 
+.TopNavContainer { 
     display: flex;
-    /* position: absolute; */
-    /* position:fixed; */
     justify-content: center;
     font-family: var(--font-highlight);
-    /* z-index: 5; */
     width: 100%;
     height: 120px;
     flex-direction: row;

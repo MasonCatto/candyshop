@@ -1,7 +1,5 @@
 import Link from 'next/link';
 import style from './topNavigation.module.css';
-// import WebsiteLogo from '../../Assets/TopNavigation/WebsiteLogo.png';
-// import { CartIcon } from '../../Assets/TopNavigation/CartIcon.svg';
 
 export default function TopNavigation() {
     return (
@@ -11,10 +9,10 @@ export default function TopNavigation() {
                         <img className='Top-nav-logo' src={WebsiteLogo} alt="logo"/>
                     </a> */}
                 </Link>
-                <Link className={style.CartAttribute} href="/cart">
+                {/* <Link className={style.CartAttribute} href="/cart"> */}
                     {/* <a className="Cart-attribute">
                     </a> */}
-                </Link>
+                {/* </Link> */}
                 <Link href="/login"className={style.LoginAttribute} > Login
                     {/* <a className="Login-attribute">Login</a> */}
                 </Link>
